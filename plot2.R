@@ -25,6 +25,9 @@ exdata$dateTime = strptime(paste0(exdata$Date,";",exdata$Time), format="%d/%m/%Y
 ##########
 
 # Set up output device and plot
-#png("plot1.png",480,480)
-plot(exdata$Date, , type='l')
-#dev.off()
+png("plot2.png",480,480)
+plot(exdata$dateTime, exdata$Global_active_power,
+     type='l',
+     xlab='',
+     ylab='Global Active Power (kilowatts)')
+dev.off()
