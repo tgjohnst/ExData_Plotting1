@@ -25,10 +25,3 @@ exdata$Time = strptime(exdata$Time, format="%H:%M:%S" )
 
 ##########
 
-# Set up output device and plot
-png("plots/plot1.png",480,480)
-hist(exdata$Global_active_power,
-     col="red",
-     xlab="Global Active Power (kilowatts)",
-     main = "Global Active Power")
-dev.off()

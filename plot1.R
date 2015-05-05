@@ -23,5 +23,15 @@ exdata <- exdata[exdata$Date == "2/2/2007" | exdata$Date == "1/2/2007" ,]
 exdata$Date = as.Date(exdata$Date,format = '%d/%m/%Y')
 exdata$Time = strptime(exdata$Time, format="%H:%M:%S" )
 
+##########
+
 
 ##########
+
+# Set up output device and plot
+png("plot1.png",480,480)
+hist(exdata$Global_active_power,
+     col="red",
+     xlab="Global Active Power (kilowatts)",
+     main = "Global Active Power")
+dev.off()
